@@ -33,11 +33,11 @@ function onTextAreaInput() {
   
   const localStorageData = JSON.parse(localStorage.getItem(FEEDBACK_FORM_KEY));
 
-  if (localStorageData.message) {
+  if (localStorageData && localStorageData.message) {
     refs.textarea.value = localStorageData.message;
   }
 
-  if (localStorageData.email) {
+  if (localStorageData && localStorageData.email) {
     refs.email.value = localStorageData.email;
   }
 }
